@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agris</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Kg</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agris.each do |agri| %>
+      <tr>
+        <td><%= agri.user_id %></td>
+        <td><%= agri.name %></td>
+        <td><%= agri.date %></td>
+        <td><%= agri.kg %></td>
+        <td><%= agri.comment %></td>
+        <td><%= link_to 'Show', agri %></td>
+        <td><%= link_to 'Edit', edit_agri_path(agri) %></td>
+        <td><%= link_to 'Destroy', agri, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agri', new_agri_path %>

@@ -1,0 +1,2 @@
+class Agri < ApplicationRecord
+end

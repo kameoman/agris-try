@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @agri.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @agri.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @agri.date %>
+</p>
+
+<p>
+  <strong>Kg:</strong>
+  <%= @agri.kg %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @agri.comment %>
+</p>
+
+<%= link_to 'Edit', edit_agri_path(@agri) %> |
+<%= link_to 'Back', agris_path %>
