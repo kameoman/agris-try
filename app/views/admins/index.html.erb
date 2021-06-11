@@ -1,4 +1,14 @@
-<h1>Admins#index</h1>
-<p>Find me in app/views/admins/index.html.erb</p>
-<%= link_to '一覧へ', agris_path %>
-<%= link_to 'USER一覧へ', users_path %>
+
+<h1>Agris管理者画面</h1>
+<div class=admin.main>
+  <body class="text-center bg-light" style="height: 80%;">
+    <div class="border rounded bg-white" style="height: 200px;" >
+        <h1 class="h3 my-3 mx-auto">管理者メニュー</h1>
+        <div class="mx-auto" style="width: 70%;">
+          <%= link_to 'Agris一覧へ', agris_path,class: "text-white btn btn-primary btn-lg btn-block" %>
+         
+          <%= link_to 'USER一覧へ', users_path,class: "text-white btn btn-success btn-lg btn-block" %>
+        
+        </div>
+    </div>
+  </body>

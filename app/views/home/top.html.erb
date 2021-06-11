@@ -1,3 +1,16 @@
-<h1>すべてのホーム画面へ　ようこそ2</h1>
+<h1>ようこそAgrisへ</h1>
 
-<h1>ここから管理者と生産者で別れます</h1>
+<title>ログイン|Agris ゲストユーザー</title>
+  <body class="text-center bg-light">
+    <div>
+      <%= image_tag 'logo.png', size: '150x150'  %>
+    </div>
+    <div class="border rounded bg-white " >
+        <h1 class="h3 my-3 mx-auto">ゲストユーザー</h1>
+        <div class="mx-auto" style="width: 200px;">
+          <%= link_to "新規登録", new_user_registration_path,class: "btn btn-primary text-white rounded-pill px-5 my-4 " %>
+          <%= link_to "ログイン", new_user_session_path,class: "btn btn-primary text-white rounded-pill px-5 my-4" %>
+        </div>
+    </div>
+<div class="container-fluid">
+</div>
