@@ -8,6 +8,7 @@ class AgrisController < ApplicationController
 
   # GET /agris/1 or /agris/1.json
   def show
+    @agris = Agri.all
   end
 
   # GET /agris/new

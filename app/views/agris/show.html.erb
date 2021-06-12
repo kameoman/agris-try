@@ -1,6 +1,40 @@
+<h1>詳細ページ！</h1>
+
 <p id="notice"><%= notice %></p>
 
 <p>
+
+  <div class="vertical-scroll-table">
+  <table class="table table-striped table table-hover table-inverse">
+    <thead>
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date</th>
+        <th scope="col">Kg</th>
+        <th scope="col">Comment</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @agris.each do |agri| %>
+        <tr>
+          <td scope="row"><%= agri.user_id %></td>
+          <td scope="row"><%= agri.name %></td>
+          <td scope="row"><%= agri.date %></td>
+          <td scope="row"><%= agri.kg %></td>
+          <td scope="row"><%= agri.comment %></td>
+
+          <td scope="row"><%= link_to 'Show', agri , class: "btn btn-primary text-white" ,type: "button" %></td>
+          <td scope="row"><%= link_to 'Edit', edit_agri_path(agri) ,class: "btn btn-warning text-white" ,type: "button" %></td>
+          <td scope="row"><%= link_to 'Destroy', agri,class: "btn btn-danger text-white" ,type: "button" , method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
   <strong>User:</strong>
   <%= @agri.user_id %>
 </p>
